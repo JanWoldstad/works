@@ -10,7 +10,7 @@ In graph-theoretic terms, the wild number of every minimum proper edge coloring 
 
 The new step rules out an obstruction in both nine-point cases. One computation examines 11,072 graphs and leaves just two possibilities, each excluded by a matching argument. A second computation chooses a point of smallest degree and classifies the obstructions independently. The written proof explains why these finite searches cover every coloring. [Proof](PROOF.md) · [Coverage of the reduction](reduction.md) · [Independent classification](combin/README.md)
 
-Codex assisted with the argument and the implementations. The result is a computer-assisted proof with executable checks. Independent mathematical review is welcome. External peer review and an end-to-end Lean formalization remain open.
+JanWoldstad worked with **OpenAI Codex**, an AI assistant, on the two remaining cases. Codex helped develop the counting argument and wrote and tested the Python and C++ checkers. Independent mathematical review is welcome. External peer review and an end-to-end Lean formalization remain open.
 
 ## Reproduce the checks
 

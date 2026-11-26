@@ -1,5 +1,7 @@
 # The wild number of the complete graphs on 13 and 14 vertices
 
+Prepared by **JanWoldstad** with **OpenAI Codex**.
+
 **Result.** In every proper 13-edge-coloring of the complete graph on 13 vertices, one can choose nine edges so that adding those same edges to each individual color class connects all 13 vertices. Eight never suffice. The wild number is therefore exactly **9**. The same value follows for every minimum proper edge-coloring of the complete graph on 14 vertices.
 
 Dawkins, Nappo, Tong and Zimbizi state the general claim in Conjecture 6.1. The catalogue contributor @aadrianvv reduced the 13-vertex case to two questions about partitions of nine points, called A13(0) and A13(1). Below we derive that reduction for every proper 13-edge-coloring and settle the two questions by exhaustive enumeration. One proof fixes a point of maximum degree. A second proof fixes a point of minimum degree and classifies the possible obstructions. [Original paper](https://arxiv.org/abs/2610.22142) · [Original reduction, §4](https://github.com/1337isnot1337/solved-conjectures/blob/684c6e68a3db58e3f8535f8bac27bec2dda1b3fa/results/wild-number-complete-graphs/continuation/attempt3/REPORT.md) · [Contributor credit](https://github.com/1337isnot1337/solved-conjectures/blob/684c6e68a3db58e3f8535f8bac27bec2dda1b3fa/results/wild-number-complete-graphs/README.md)
