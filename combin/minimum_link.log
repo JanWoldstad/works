@@ -1,0 +1,14 @@
+d links search_nodes seven_set_leaves four_set_leaves
+0 1 354 8 0
+1 1 275 0 0
+2 2 342 0 0
+3 5 629 0 0
+4 11 816 0 0
+5 24 1162 0 0
+6 56 1939 0 29
+7 115 2462 0 0
+8 221 3225 0 0
+9 402 4274 0 0
+10 663 4343 0 0
+11 980 3808 0 0
+PASS: classified every blocker with at most 35 triples and maximum degree at most 19; 2481 link types.

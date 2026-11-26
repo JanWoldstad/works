@@ -1,0 +1,14 @@
+possible link, degree 18, mask 268434432
+possible link, degree 19, mask 268434944
+degree 10 tested 663 survivors 0
+degree 11 tested 980 survivors 0
+degree 12 tested 1312 survivors 0
+degree 13 tested 1557 survivors 0
+degree 14 tested 1646 survivors 0
+degree 15 tested 1557 survivors 0
+degree 16 tested 1312 survivors 0
+degree 17 tested 980 survivors 0
+degree 18 tested 663 survivors 1
+degree 19 tested 402 survivors 1
+branch nodes 30730
+PASS: all surviving links have the two reported forms.
