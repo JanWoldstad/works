@@ -1,0 +1,11 @@
+import WildNumber.Orbit.Data
+
+namespace WildNumber.Nine.Orbit
+
+set_option maxRecDepth 100000 in
+set_option maxHeartbeats 0 in
+theorem chunkL0x0 : CoversRows level0 level1 0 1 := by
+  apply rows_of_check #[0x3eb1a23eb1a2000f74688f74688003cd5a23d99a2000ef5888f63c88003ad6323d8d62000e758d0f634700038d6347d8d11800d7c688bf46880034f5a22f99a2000cfd888be3c880032f6322f8d62000c7d8d0be34700030f6346f8d11800b3e688b3e688002bfa222cef22000abe8c8b3b5880029fa342ced1c000a3e8d1b3b4460023faa22c7f220008beac8b1f5880021fab42c7d1c00083ead1b1f446001afac22c6be200067eb10b1ae700018fac46c6b9180047eb18b1a3f00010fac66c68f180023eb1ab1a23e]
+  decide +kernel
+
+end WildNumber.Nine.Orbit

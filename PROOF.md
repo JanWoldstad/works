@@ -55,4 +55,6 @@ On $K_{14}$ every color in a minimum proper coloring is a perfect matching. Dele
 
 ## Reproducing the computations
 
+The [Lean formalization](WildNumber/Main.lean) proves both final wild-number equalities. Its finite proof follows the minimum-degree approach and rules out counterexamples using the five required centers directly. The written maximum-degree search and its independent graph-atlas check are additional ways to verify the result.
+
 Follow the [fresh-clone instructions](README.md) to rerun the exhaustive checks. The [witness script](witness.py) also constructs nine wild edges for a supplied 13-vertex coloring and checks connectivity separately for each of its 13 colors.

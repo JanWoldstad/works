@@ -1,0 +1,54 @@
+name: Lean proof
+
+on:
+  push:
+    paths: &lean_paths
+      - '**/*.lean'
+      - 'lean-toolchain'
+      - 'lakefile.toml'
+      - 'lake-manifest.json'
+      - '.github/workflows/lean.yml'
+  pull_request:
+    paths: *lean_paths
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  kernel:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 180
+    env:
+      LEAN_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - uses: leanprover/lean-action@ba3fdfe5c4476c925da13bf11a005ddb47e47aee # v1
+        with:
+          auto-config: 'false'
+          use-mathlib-cache: 'false'
+          use-github-cache: 'false'
+      - name: Fetch the project's mathlib dependencies
+        shell: bash
+        run: |
+          mapfile -t deps < <(git grep -h '^import Mathlib\.' -- '*.lean' | cut -d' ' -f2 | sort -u)
+          lake exe cache get "${deps[@]}"
+      - name: Check link generation and relabeling
+        shell: bash
+        run: |
+          # Build each of the three certificate chains separately to bound peak memory.
+          for module in $(awk '/^import WildNumber\.Orbit\.L[0-9]/ {print $2}' WildNumber/Orbit/All.lean | tail -3); do
+            lake build "$module"
+          done
+          lake build WildNumber.Orbit
+      - name: Check all finite search certificates
+        shell: bash
+        run: |
+          for module in $(awk '/^import WildNumber\.FiniteCertificates\.Batch/ {print $2}' WildNumber/FiniteTheorem.lean | tail -3); do
+            lake build "$module"
+          done
+          lake build WildNumber.FiniteTheorem
+      - name: Check both final theorems and their axioms
+        run: lake build

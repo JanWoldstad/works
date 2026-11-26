@@ -18,8 +18,8 @@ def pair_bit(u, v):
     return 1 << (v * (v - 1) // 2 + u)
 
 
-def relabel(graph, n):
-    """Choose a relabeling, minimizing over vertices tied by colour refinement."""
+def canonical_label(graph, n):
+    """Return the canonical graph and its new-to-old vertex permutation."""
     neighbors = [0] * n
     for u, v in combinations(range(n), 2):
         if graph & pair_bit(u, v):
@@ -46,13 +46,19 @@ def relabel(graph, n):
                     for u, v in combinations(cell, 2))
         choices.append([cell] if twins else permutations(cell))
     best = None
+    best_order = None
     for parts in product(*choices):
         order = [u for part in parts for u in part]
         code = sum(pair_bit(i, j) for i, j in combinations(range(n), 2)
                    if neighbors[order[i]] & (1 << order[j]))
         if best is None or code < best:
             best = code
-    return best
+            best_order = order
+    return best, best_order
+
+
+def relabel(graph, n):
+    return canonical_label(graph, n)[0]
 
 
 def link_types():
