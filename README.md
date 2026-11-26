@@ -4,4 +4,4 @@ A collection of mathematical proofs. Each project under [`proofs/`](proofs/) con
 
 | Problem | Result | Verification |
 | --- | --- | --- |
-| [Wild number of complete graphs](proofs/wild-number-13-14/) | Every minimum proper edge coloring on 13 or 14 vertices has wild number nine. This settles those two cases of Conjecture 6.1. | [Lean theorems](proofs/wild-number-13-14/WildNumber/Main.lean) · [Written proof and credits](proofs/wild-number-13-14/PROOF.md) · [Run the checks](proofs/wild-number-13-14/README.md#check-the-lean-proof) |
+| [Wild number of complete graphs](proofs/wild-number-13-14/) | Every minimum proper edge coloring of the complete graph on 13 or 14 vertices has wild number nine. | [Paper (PDF)](proofs/wild-number-13-14/paper/wild-number.pdf) · [Lean theorems](proofs/wild-number-13-14/WildNumber/Main.lean) · [Run the checks](proofs/wild-number-13-14/README.md#check-the-lean-proof) |

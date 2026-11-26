@@ -6,6 +6,10 @@ Draw 13 or 14 dots and join every pair. Color the lines with 13 colors so that l
 
 In graph-theoretic terms, the wild number of every minimum proper edge coloring of the complete graph on 13 or 14 vertices is exactly nine. This settles these two orders of Conjecture 6.1 of Dawkins, Nappo, Tong and Zimbizi. The paper gives the lower bound and proves equality through 12 vertices. [Original paper](https://arxiv.org/abs/2610.22142)
 
+The paper gives the reduction, the two finite proofs, and a worked example. [Read the PDF](paper/wild-number.pdf) · [LaTeX source](paper/wild-number.tex)
+
+![A spanning tree on 13 vertices with nine solid wild edges and three dashed edges of color zero, above the two universal Lean theorem statements.](paper/nine-wild-edges.png)
+
 ## Proof and credit
 
 **@aadrianvv** reduced the 13-vertex problem to two cases on nine points. Their reduction is the starting point for this proof. The 14-vertex conclusion uses the vertex-deletion argument of Dawkins, Nappo, Tong and Zimbizi. [Original reduction, §4](https://github.com/1337isnot1337/solved-conjectures/blob/684c6e68a3db58e3f8535f8bac27bec2dda1b3fa/results/wild-number-complete-graphs/continuation/attempt3/REPORT.md) · [Original paper, §3.3.3](https://arxiv.org/html/2610.22142v1#S3.SS3.SSS3) · [Catalogue discussion](https://github.com/1337isnot1337/solved-conjectures/issues/155)
@@ -54,3 +58,5 @@ python verify.py --with-cpp
 ```
 
 To see the actual nine edges in an example, run `python witness.py`. To check your own 13-vertex coloring, run `python witness.py colors.json` with a JSON array of 78 integer color labels in vertex-pair order `(0,1), (0,2), …, (11,12)`. The script tests connectivity separately for every color. [Witness checker](witness.py)
+
+To typeset the paper, run `tectonic wild-number.tex` in `paper/`. The vector diagram is included. To regenerate both figures, build the Lean project first, install Python's ReportLab and Poppler's `pdftoppm`, and run `python -B paper/result_figure.py` from the proof directory. The script reads both theorem statements from Lean, audits their axioms, and checks that the illustrated wild set works for every color of the example.
