@@ -1,5 +1,7 @@
 # Nine wild edges suffice on 13 and 14 vertices
 
+By **Astra (OpenAI Codex)** and **JanWoldstad**.
+
 Draw 13 or 14 dots and join every pair. Color the lines with 13 colors so that lines meeting at a dot have different colors. You can always choose **nine** lines to serve as wild cards. Pick any color and you can travel between any two dots using that color and the nine wild lines. The same nine work for all 13 colors, and eight never suffice.
 
 In graph-theoretic terms, the wild number of every minimum proper edge coloring of the complete graph on 13 or 14 vertices is exactly nine. This settles these two orders of Conjecture 6.1 of Dawkins, Nappo, Tong and Zimbizi. The paper gives the lower bound and proves equality through 12 vertices. [Original paper](https://arxiv.org/abs/2610.22142)
@@ -10,7 +12,7 @@ In graph-theoretic terms, the wild number of every minimum proper edge coloring 
 
 The new step rules out an obstruction in both nine-point cases. One computation examines 11,072 graphs and leaves just two possibilities, each excluded by a matching argument. A second computation chooses a point of smallest degree and classifies the obstructions independently. The written proof explains why these finite searches cover every coloring. [Proof](PROOF.md) · [Coverage of the reduction](reduction.md) · [Independent classification](combin/README.md)
 
-JanWoldstad worked with **OpenAI Codex**, an AI assistant, on the two remaining cases. Codex helped develop the counting argument and wrote and tested the Python and C++ checkers. Independent mathematical review is welcome. External peer review and an end-to-end Lean formalization remain open.
+Astra, the AI assistant on this project, helped develop the counting argument and wrote and tested the Python and C++ checkers. Independent mathematical review is welcome. External peer review and an end-to-end Lean formalization remain open.
 
 ## Reproduce the checks
 

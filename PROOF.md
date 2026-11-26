@@ -1,6 +1,6 @@
 # The wild number of the complete graphs on 13 and 14 vertices
 
-Prepared by **JanWoldstad** with **OpenAI Codex**.
+By **Astra (OpenAI Codex)** and **JanWoldstad**.
 
 **Result.** In every proper 13-edge-coloring of the complete graph on 13 vertices, one can choose nine edges so that adding those same edges to each individual color class connects all 13 vertices. Eight never suffice. The wild number is therefore exactly **9**. The same value follows for every minimum proper edge-coloring of the complete graph on 14 vertices.
 
