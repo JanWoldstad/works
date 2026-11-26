@@ -54,7 +54,7 @@ edge, ruling out two edge-disjoint perfect matchings.
 
 The following independent check decodes the actual two canonical masks
 and enumerates the 105 perfect matchings of the complete graph on eight
-vertices. Run from the repository root.
+vertices. Run from the `wild-number-13-14` directory.
 
 ```shell
 python -I -B sat/check_terminal_links.py

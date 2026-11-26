@@ -6,6 +6,6 @@ The pure-Python [cross-check](check_graph6.py) reads this external census. For e
 
 The check examined all 11,072 links having 10 through 19 edges in the 12,346 graph records. Two survived. In record 909 the absent pairs are all ten edges on vertices 0 through 4. In record 3378 the absent pairs are the same edges except for the pair joining 0 to 4. Their link degrees are 18 and 19, respectively. Each of the remaining degrees had zero survivors.
 
-Run the independent script from the repository root using Python 3.10 or newer.
+Run the independent script from the `wild-number-13-14` directory using Python 3.10 or newer.
 
     python -I -B blockers/check_graph6.py

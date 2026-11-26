@@ -35,7 +35,7 @@ At each vertex-cover branch the checker either selects a vertex of this graph or
 
 The run covered 2,481 root graphs and 23,629 vertex-cover search nodes. The eight surviving leaves at root degree zero were seven-set families. The 29 at root degree six all contained the four-set family. No other leaves survived. These are leaf counts after fixing labeled representatives for the root links. Several leaves can represent isomorphic blockers.
 
-Run from the repository root with Python 3.10 or newer. The script uses only the standard library and exits with an error if it finds an unclassified blocker or disagrees with the orbit counts. [Checker](minimum_link.py) · [Recorded output](minimum_link.log)
+Run from the `wild-number-13-14` directory with Python 3.10 or newer. The script uses only the standard library and exits with an error if it finds an unclassified blocker or disagrees with the orbit counts. [Checker](minimum_link.py) · [Recorded output](minimum_link.log)
 
 ```shell
 python -I -B combin/minimum_link.py
