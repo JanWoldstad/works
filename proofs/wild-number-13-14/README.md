@@ -22,7 +22,7 @@ With Elan installed, run the following commands to check a fresh clone. The tool
 
 ```sh
 git clone https://github.com/JanWoldstad/works.git
-cd works/wild-number-13-14
+cd works/proofs/wild-number-13-14
 lake exe cache get
 lake build
 ```
@@ -41,7 +41,7 @@ The default build audits the public theorems' dependencies. It permits only `pro
 Use Python 3.10 or newer. From the root of the clone, enter the proof folder and run the checker. The default run uses only the standard library. All input data are included.
 
 ```sh
-cd wild-number-13-14
+cd proofs/wild-number-13-14
 python verify.py
 ```
 

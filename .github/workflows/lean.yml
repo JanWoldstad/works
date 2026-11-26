@@ -3,10 +3,10 @@ name: Wild number Lean proof
 on:
   push:
     paths: &lean_paths
-      - 'wild-number-13-14/**/*.lean'
-      - 'wild-number-13-14/lean-toolchain'
-      - 'wild-number-13-14/lakefile.toml'
-      - 'wild-number-13-14/lake-manifest.json'
+      - 'proofs/wild-number-13-14/**/*.lean'
+      - 'proofs/wild-number-13-14/lean-toolchain'
+      - 'proofs/wild-number-13-14/lakefile.toml'
+      - 'proofs/wild-number-13-14/lake-manifest.json'
       - '.github/workflows/lean.yml'
   pull_request:
     paths: *lean_paths
@@ -21,7 +21,7 @@ jobs:
     timeout-minutes: 180
     defaults:
       run:
-        working-directory: wild-number-13-14
+        working-directory: proofs/wild-number-13-14
     env:
       LEAN_NUM_THREADS: '1'
     steps:
@@ -30,7 +30,7 @@ jobs:
           persist-credentials: false
       - uses: leanprover/lean-action@ba3fdfe5c4476c925da13bf11a005ddb47e47aee # v1
         with:
-          lake-package-directory: wild-number-13-14
+          lake-package-directory: proofs/wild-number-13-14
           auto-config: 'false'
           use-mathlib-cache: 'false'
           use-github-cache: 'false'

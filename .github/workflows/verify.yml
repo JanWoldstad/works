@@ -3,7 +3,7 @@ name: Wild number Python and C++ checks
 on:
   push:
     paths: &check_paths
-      - 'wild-number-13-14/**'
+      - 'proofs/wild-number-13-14/**'
       - '.github/workflows/verify.yml'
   pull_request:
     paths: *check_paths
@@ -18,7 +18,7 @@ jobs:
     timeout-minutes: 20
     defaults:
       run:
-        working-directory: wild-number-13-14
+        working-directory: proofs/wild-number-13-14
     steps:
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
         with:
